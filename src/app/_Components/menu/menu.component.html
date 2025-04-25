@@ -1,1 +1,11 @@
-<p>menu works!</p>
+<div class="menu">
+    <div class="ourcoffee">
+        <h1>Our Coffee</h1>
+    </div>
+
+    <div class="coffee-list">
+        @for (coffee of coffeeList; track $index) {
+            <app-coffee-card [coffee]="coffee"></app-coffee-card>
+        }
+    </div>
+</div>

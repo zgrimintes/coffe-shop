@@ -1,1 +1,8 @@
-<p>coffee-card works!</p>
+<div class="coffee-card">
+    <img [src]="coffee().image" alt="{{ coffee().name }}" class="coffee-image" />
+    <div class="coffee-details">
+      <h2 class="coffee-name">{{ coffee().name }}</h2>
+      <p class="coffee-description">{{ coffee().description }}</p>
+      <p class="coffee-price">${{ coffee().price }}</p>
+    </div>
+</div>

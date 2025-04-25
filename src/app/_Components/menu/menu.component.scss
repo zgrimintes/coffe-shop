@@ -1,0 +1,21 @@
+.menu {
+
+    height: 100vh; 
+}
+
+.ourcoffee h1 {
+    text-align: center; 
+    font-size: 2.5rem; 
+    color: #6b4f4f;
+}
+
+.coffee-list {
+    display: flex; /* Makes the coffee list inline */
+    justify-content: center; /* Centers the coffee items horizontally */
+    gap: 20px; /* Adds spacing between coffee items */
+    margin-top: 20px; /* Adds some space above the coffee list */
+}
+
+app-coffee-card {
+    flex: 0 0 auto; /* Ensures the cards don't shrink or grow */
+}

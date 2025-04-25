@@ -1,0 +1,44 @@
+.navbar {
+    background-color: #6b4f4f; 
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand a {
+    font-family: 'Georgia', serif; /* Defining font */
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item a:hover {
+    background-color: #8c6e6e; 
+    border-radius: 10px;
+}
+
+.photo-container {
+    width: 100%;
+}
+
+.photo {
+    width: 100%; /* Makes the image the same width as the navbar */
+
+}
