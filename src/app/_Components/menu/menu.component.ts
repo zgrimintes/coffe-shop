@@ -46,8 +46,17 @@ export class MenuComponent {
     },
   ];
 
-  ngOnInit() {
-    this.coffeeRows = Math.ceil(this.coffeeList.length / 3);
+  chunkedCoffeeList: Coffee[][] = [];
 
+  ngOnInit() {
+    this.chunkedCoffeeList = this.chunkArray(this.coffeeList, 4);
+  }
+
+  chunkArray(array: Coffee[], chunkSize: number): Coffee[][] {
+    const chunks: Coffee[][] = [];
+    for (let i = 0; i < array.length; i += chunkSize) {
+      chunks.push(array.slice(i, i + chunkSize));
+    }
+    return chunks;
   }
 }

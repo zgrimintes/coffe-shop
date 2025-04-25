@@ -4,8 +4,14 @@
     </div>
 
     <div class="coffee-list">
-        @for (coffee of coffeeList; track $index) {
-            <app-coffee-card [coffee]="coffee"></app-coffee-card>
-        }
+        @for (coffeeChunk of chunkedCoffeeList; track $index) {
+                <div class="coffee-row">
+                    @for (coffee of coffeeChunk; track $index) {
+                        <app-coffee-card
+                        [coffee]="coffee"> 
+                        </app-coffee-card>
+                    }
+                </div>
+            }
     </div>
 </div>
