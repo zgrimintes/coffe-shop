@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CoffeeCardComponent } from '../coffee-card/coffee-card.component';
 import { CommonModule } from '@angular/common';
 import { Coffee } from '../../_Models/Coffee';
+import { CoffeeService } from '../../_Services/coffee.service';
 
 @Component({
   selector: 'app-menu',
@@ -12,43 +13,13 @@ import { Coffee } from '../../_Models/Coffee';
 })
 export class MenuComponent {
 
-  coffeeRows: number = 0;
-  coffeeList: Coffee[] = [
-    {
-      name: 'Espresso',
-      description: 'Strong and bold coffee brewed by forcing hot water through finely-ground coffee beans.',
-      price: 3.00,
-      image: 'assets/espresso.jpg'
-    },
-    {
-      name: 'Latte',
-      description: 'Smooth and creamy coffee made with espresso and steamed milk, topped with a light layer of foam.',
-      price: 4.50,
-      image: 'assets/latte.jpg'
-    },
-    {
-      name: 'Cappuccino',
-      description: 'Rich and frothy coffee made with equal parts espresso, steamed milk, and milk foam.',
-      price: 4.00,
-      image: 'assets/cappuccino.jpg'
-    },
-    {
-      name: 'Americano',
-      description: 'Bold coffee made by diluting espresso with hot water for a smooth and rich flavor.',
-      price: 3.50,
-      image: 'assets/americano.jpg'
-    },
-    {
-      name: 'Ciapuccino',
-      description: 'TBA.',
-      price: 4.00,
-      image: 'assets/ciapuccino.jpg'
-    },
-  ];
+  coffeService = inject(CoffeeService);
+  coffeeList: Coffee[] = [];
 
   chunkedCoffeeList: Coffee[][] = [];
 
   ngOnInit() {
+    this.coffeeList = this.coffeService.coffeeList();
     this.chunkedCoffeeList = this.chunkArray(this.coffeeList, 4);
   }
 
