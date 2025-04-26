@@ -30,4 +30,9 @@ export class MenuComponent {
     }
     return chunks;
   }
+
+  addToCart(coffee: Coffee) {
+    this.coffeService.addToCart(coffee);
+  }
+
 }

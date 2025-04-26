@@ -17,7 +17,16 @@
 <div class="photo-container">
     <img src="./assets/coffeeInterior.webp" alt="Coffee Shop" class="photo">
     <div class="overlay">
-        <h1 class="overlay-text">Welcome to Coffee Shop</h1>
-        <button class="overlay-button">Order now</button>
+        <button class="overlay-button" (click)="order()">Order now</button>
+        
+        <div class="coffee-list-container">
+            <ul class="coffee-list">
+                @for (coffee of coffeeService.orderList(); track $index) {
+                    <li class="coffee-item">
+                        {{ coffee.name }}
+                    </li>
+                }
+            </ul>
+        </div>
     </div>
 </div>

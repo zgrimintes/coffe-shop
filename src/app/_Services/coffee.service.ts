@@ -39,5 +39,26 @@ export class CoffeeService {
     },
   ]) 
 
+  orderList = signal<Coffee[]>([]);
+
   constructor() { }
+
+  addToCart(coffee: Coffee) {
+    if (this.orderList()[0]?.name === 'Order placed!') 
+      this.orderList.set([]);
+
+    this.orderList.set([...this.orderList(), coffee]);
+  }
+
+  order() {
+    this.orderList.set([
+      {
+        name: 'Order placed!',
+        description: 'Thank you for your order.',
+        price: 0.00,
+        image: 'assets/placeholder.jpg'
+      },
+    ]);
+  }
+
 }

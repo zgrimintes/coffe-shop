@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CoffeeService } from '../../_Services/coffee.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
+  coffeeService = inject(CoffeeService);
 
+  ngOnInit() {
+
+  }
+
+  order() {
+    this.coffeeService.order();
+  }
 }

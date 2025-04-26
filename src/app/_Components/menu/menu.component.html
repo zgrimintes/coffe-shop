@@ -8,6 +8,7 @@
                 <div class="coffee-row">
                     @for (coffee of coffeeChunk; track $index) {
                         <app-coffee-card
+                        (orderEvent)="addToCart(coffee)"
                         [coffee]="coffee"> 
                         </app-coffee-card>
                     }

@@ -49,10 +49,10 @@
 .overlay {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 15%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: rgb(243, 214, 48);
+    color: #514040;
 }
 
 .overlay-text {
@@ -75,4 +75,31 @@
 
 .overlay-button:hover {
     background-color: #8c6e6e; 
+}
+
+.coffee-list-container {
+    margin-top: 20px;
+    max-height: 200px; 
+    overflow-y: auto; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.coffee-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.coffee-item {
+    font-size: 1rem;
+    color: #6b4f4f;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.coffee-item:last-child {
+    border-bottom: none; 
 }

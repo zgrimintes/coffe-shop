@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, EventEmitter, input, Output } from '@angular/core';
 import { Coffee } from '../../_Models/Coffee';
 
 @Component({
@@ -9,9 +9,11 @@ import { Coffee } from '../../_Models/Coffee';
   styleUrl: './coffee-card.component.scss'
 })
 export class CoffeeCardComponent {
+  @Output() orderEvent = new EventEmitter<Coffee>();
+
   coffee = input.required<Coffee>();
 
   addToCart() {
-    console.log('Added to cart:', this.coffee.name);
+    this.orderEvent.emit(this.coffee());
   }
 }
