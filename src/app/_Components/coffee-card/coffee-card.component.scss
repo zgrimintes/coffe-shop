@@ -1,44 +1,60 @@
 .coffee-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-    }
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
   }
-  
-  .coffee-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .coffee-details {
-    padding: 15px;
-  }
-  
-  .coffee-name {
-    font-size: 1.5rem;
-    color: #6b4f4f;
-    margin: 10px 0;
-  }
-  
-  .coffee-description {
-    font-size: 1rem;
-    color: #555;
-    margin: 10px 0;
-  }
-  
-  .coffee-price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #6b4f4f;
-    margin: 10px 0;
-  }
+}
+
+.coffee-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.coffee-details {
+  padding: 15px;
+}
+
+.coffee-name {
+  font-size: 1.5rem;
+  color: #6b4f4f;
+  margin: 10px 0;
+}
+
+.coffee-description {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.coffee-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6b4f4f;
+  margin: 10px 0;
+}
+
+.coffee-button {
+  background-color: #6b4f4f; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.coffee-button:hover {
+  background-color: #8c6e6e; 
+}

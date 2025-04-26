@@ -11,5 +11,7 @@ import { Coffee } from '../../_Models/Coffee';
 export class CoffeeCardComponent {
   coffee = input.required<Coffee>();
 
-
+  addToCart() {
+    console.log('Added to cart:', this.coffee.name);
+  }
 }
